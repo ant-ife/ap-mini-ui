@@ -134,12 +134,6 @@ export default {
       let oldValue = el.value
 
       /**
-       * 中文输入法输入时默认会触发 DOM 的 input 事件
-       * Vue 封装的 input 事件使用 compositionstart + compositionend 进行了优化
-       * 当输入完成后才触发 input 事件、同步 model
-       * 如果在中文输入过程中，外界改变 input 的内容，会和 Vue冲突，出现奇怪 bug
-       * 所以此处做同样的优化。
-       * composition： 是否处于输入法输入状态
        * ref: https://github.com/vuejs/vue/blob/dev/src/directives/public/model/text.js
        */
       let composition = false
@@ -169,8 +163,6 @@ export default {
         this.setCursorPos(index)
       }
 
-      // Android 4.3 在 input 事件中获取光标位置不正确，影响正常输入。需要 setTimeout 才正常。
-      // 保险起见，Android 一律设置 timeout
       if (device.Android) {
         const _inputEventListener = this._inputEventListener
         this._inputEventListener = () => setTimeout(_inputEventListener, 0)
