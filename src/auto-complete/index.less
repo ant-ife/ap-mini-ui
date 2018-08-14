@@ -1,0 +1,31 @@
+.ap-auto-complete {
+  .ap-clearable-input {
+    margin: 0;
+  }
+
+  .ap-dropdown-container {
+    position: relative;
+  }
+
+  .ap-dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    max-height: 4rem;
+    background: #fff;
+    border: 1px solid @border-color;
+    z-index: 100;
+  }
+
+  .ap-dropdown-item {
+    &:active {
+      background-color: #FAFAFA;
+    }
+  }
+
+  .ap-dropdown-default {
+    padding: .3rem .2rem;
+  }
+}

@@ -1,0 +1,67 @@
+.ap-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+
+.ap-modal-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(55, 55, 55, .6);
+  height: 100%;
+}
+
+.ap-modal-wrap {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  margin-left: -2.7rem;
+  z-index: 5;
+  width: 5.4rem;
+  border-radius: .14rem;
+  background-color: #f1f1f1;
+  transform: translateZ(1px); // fix safari bug https://stackoverflow.com/a/20898012
+}
+
+.ap-modal-content {
+  padding: .4rem .34rem;
+  text-align: center;
+  font-size: .3rem;
+  line-height: .4rem;
+}
+
+.ap-modal-header {
+  font-size: .34rem;
+  font-weight: 700;
+  padding-bottom: .2rem;
+  color: #383838;
+}
+
+.ap-modal-button {
+  display: flex;
+
+  > a {
+    flex: 1;
+    display: block;
+    border: 0;
+    outline: none;
+    border-top: 1px solid #e3e3e3;
+    padding: .18rem 0;
+    color: @primary-color;
+    font-size: .32rem;
+    background-color: transparent;
+    text-align: center;
+
+    &:nth-of-type(2) {
+      border-left: 1px solid @border-color;
+    }
+  }
+}

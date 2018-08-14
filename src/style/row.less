@@ -1,0 +1,131 @@
+/* *
+ *  Usage:
+ *    [arrow]:  default arrow right
+ *    [arrow="up"]:  arrow up
+ *    [arrow="down"]:  arrow down
+ *
+ *  <header class="ap-rows-header"></header>
+ *  <div class="ap-rows-list">
+ *    <div class="ap-flex-row" arrow>
+ *      <div>Foo</div>
+ *      <div input>
+ *        <input type="text">
+ *      </div>
+ *      <div>
+ *        <icon name="mastercard"></icon>
+ *        <icon name="visa"></icon>
+ *      </div>
+ *    </div>
+ *    <div class="ap-flex-row">
+ *    </div>
+ *  </div>
+ */
+
+.ap-rows-header {
+  padding: .2rem .3rem;
+  color: #888;
+}
+
+.ap-rows-list {
+  border-top: 1px solid @border-color;
+}
+
+@row-padding-y: .4rem;
+
+.ap-flex-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #fff;
+
+  > div {
+    padding-top: @row-padding-y;
+    padding-bottom: @row-padding-y;
+
+    &:nth-of-type(1) {
+      align-self: flex-start;
+      padding-left: .3rem;
+      padding-right: .3rem;
+      color: #9b9b9b;
+    }
+
+    &:nth-of-type(2) {
+      flex-grow: 1;
+    }
+
+    &:last-child {
+      padding-right: .3rem;
+    }
+
+    &[input] {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: .3rem;
+    right: 0;
+    border-top: 1px solid @border-color;
+    content: '';
+  }
+
+  &:first-child::before {
+    display: none;
+  }
+
+  &[arrow] {
+    padding-right: .7rem;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: .3rem;
+      margin-top: -.08rem;
+      width: .16rem;
+      height: .16rem;
+      border: solid #9B9B9B;
+      border-width: .04rem .04rem 0 0;
+      transform: rotate(45deg);
+      content: '';
+      transition: transform .2s;
+    }
+
+    > div:last-child {
+      padding-right: 0;
+    }
+
+    &:active {
+      background-color: #FAFAFA;
+    }
+  }
+
+  &[arrow=down] {
+    &::after {
+      margin-top: -.1rem;
+      transform: rotate(135deg);
+    }
+  }
+
+  &[arrow=up] {
+    &::after {
+      margin-top: -.02rem;
+      transform: rotate(-45deg);
+    }
+  }
+
+  input:not([type="checkbox"]) {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding-top: @row-padding-y;
+    padding-bottom: @row-padding-y;
+  }
+
+  .ap-has-checkbox {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

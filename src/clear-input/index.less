@@ -1,0 +1,21 @@
+/* clearable input */
+.ap-clearable-input {
+  display: flex;
+
+  > input {
+    width: 100%;
+    border: 0;
+    outline: none;
+  }
+
+  .ap-clear-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+
+    &.ap--hidden {
+      visibility: hidden;
+    }
+  }
+}

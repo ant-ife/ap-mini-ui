@@ -1,0 +1,98 @@
+.ap-button {
+  display: block;
+  width: 100%;
+  height: .8rem;
+  margin: 0 auto;
+  border: 0;
+  border-radius: .1rem;
+  outline: none;
+  font-size: .3rem;
+  text-align: center;
+  white-space: nowrap;
+  touch-action: manipulation;
+  user-select: none;
+
+  .ap-icon-spin {
+    font-size: .4rem;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+&:disabled {
+  opacity: .4 !important;
+}
+
+.ap-button-primary {
+  background: @primary-color;
+  color: #fff;
+
+  &:active {
+    background: darken(@primary-color, 3%);
+    color: #fff;
+  }
+}
+
+.ap-button-default {
+  background: transparent;
+  color: @primary-color;
+  text-transform: uppercase;
+  border: .02rem solid @primary-color;
+  line-height: 0;
+
+  &:active {
+    background: darken(@primary-color, 3%);
+    color: #fff;
+  }
+}
+
+.ap-has-button {
+  padding-bottom: 1.6rem;
+  position: relative;
+  min-height: 100%;
+}
+
+.ap-button-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .3rem;
+  text-align: center;
+
+  .ap-button + .ap-button {
+    margin-top: .2rem;
+  }
+
+  .ap-button-ghost {
+    margin-top: .3rem;
+    background: #fff;
+    color: @primary-color;
+    border: .02rem solid @primary-color;
+  }
+
+  &.ap--follow {
+    position: static;
+    margin-top: .3rem;
+  }
+
+  &.ap--fix {
+    position: fixed;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.01) 0%,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  > a {
+    display: inline-block;
+    margin: .3rem 0;
+  }
+
+  p {
+    color: #777;
+    margin-bottom: .3rem;
+  }
+}

@@ -1,0 +1,73 @@
+@password-border: #a5a5a5;
+@password-height: .76rem;
+
+.ap-digital-password {
+  display: block;
+  position: relative;
+  height: @password-height;
+  overflow: hidden;
+
+  > div {
+    position: relative;
+    display: flex;
+    height: 100%;
+  }
+}
+
+.ap-password-focus {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%; // Notice: this may not work in IE
+  background: none;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  // prevent the normal focus, to avoid the cursor move.
+  pointer-events: none;
+  border: 0;
+  box-shadow: none;
+  transition: none;
+  z-index: 1;
+
+  &:focus {
+    background: #fff;
+  }
+}
+
+.ap-password-item {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  font-size: .64rem;
+
+  i,
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  i {
+    width: .44rem;
+    height: .02rem;
+    background: #8F8F92;
+  }
+
+  i.ap-dot {
+    width: .32rem;
+    height: .32rem;
+    border-radius: 50%;
+    background: currentColor;
+  }
+}
+
+.ap-input-end {
+  text-align: right !important;
+  padding-right: .06rem;
+  &:focus {
+    background: transparent;
+  }
+}

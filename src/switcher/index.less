@@ -1,0 +1,65 @@
+.ap-switcher {
+  @width: 1rem;
+  @height: .6rem;
+  @padding: .04rem;
+  @bgColor: #41AAEF;
+  @borderColor: #e3e3e3;
+  @disabledColor: rgba(65, 170, 239, .3);
+  @duration: .3s;
+
+  box-sizing: content-box;
+  appearance: none;
+  position: relative;
+  width: @width;
+  height: @height;
+  border-radius: @height;
+  margin: 0;
+  outline: none;
+  background: @borderColor;
+  transition: @duration;
+  transition-property: border-color, background;
+  border: 0 solid @borderColor;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: @height;
+  }
+
+  &::before {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: @duration;
+    transition-property: left, transform;
+    background-color: @disabledColor;
+    transform: scale(1, 1);
+  }
+
+  &::after {
+    width: @height - @padding * 2;
+    height: @height - @padding * 2;
+    left: @padding;
+    top: @padding;
+    transform: translate3d(0, 0, 0);
+    transition: transform @duration cubic-bezier(.32, .86, .62, 1.14);
+    background: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
+  }
+
+  &:checked {
+    border-color: @bgColor;
+    background: @bgColor;
+
+    &::before {
+      left: @width/2;
+      transform: scale(0, 0);
+    }
+
+    &::after {
+      transform: translate3d(@width - @height, 0, 0);
+    }
+  }
+}

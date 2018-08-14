@@ -1,0 +1,20 @@
+.ap-fade-enter-active, .ap-fade-leave-active-active {
+  transition: opacity .2s;
+}
+
+.ap-fade-enter,
+.ap-fade-leave-active,
+.ap-alert-leave-active {
+  opacity: 0;
+}
+
+.ap-alert-enter-active,
+.ap-alert-leave-active {
+  transition: .2s;
+  transition-property: opacity, transform;
+}
+
+.ap-alert-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}

@@ -1,0 +1,52 @@
+.ap-toast {
+  position: fixed;
+  width: 100%;
+  top: 38%;
+  top: 38vh;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  text-align: center;
+  transform: translateY(-50%);
+
+  > div {
+    display: inline-block;
+    min-width: 2.5rem;
+    max-width: 70%;
+    padding: .42rem .4rem;
+    border-radius: .1rem;
+    background: rgba(58, 58, 58, .9);
+    color: #fff;
+    font-size: .26rem;
+  }
+
+  p {
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .ap-icon {
+    font-size: .72rem;
+  }
+
+  .ap-icon-spin {
+    width: .8rem;
+    height: .8rem;
+  }
+
+  .ap-icon + p {
+    padding-top: .2rem;
+  }
+  .ap-spin + p {
+    padding-top: .1rem;
+  }
+}
+
+.ap-toast-spin-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}

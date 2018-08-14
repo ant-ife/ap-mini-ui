@@ -1,0 +1,62 @@
+{
+  "name": "ap-mini-ui",
+  "version": "1.0.0",
+  "description": "A+ Mini UI Components based on Vue",
+  "scripts": {
+    "start:storybook": "start-storybook -p 9911 -c .storybook",
+    "build:storybook": "build-storybook -o ./docs -c .storybook",
+    "lint:css": "stylelint src/**/*.less -s less",
+    "lint:js": "eslint --ext .js,.vue src test --fix",
+    "lint": "npm run lint:js && npm run lint:css",
+    "build": "rm -rf lib && babel src -d lib --ignore \"*/**/stories/\" && NODE_ENV=production node build/build.js && npm run build:storybook",
+    "test": "torch --compile --renderer --recursive ./test/unit",
+    "test:debug": "torch --compile --renderer --recursive ./test/unit --interactive",
+    "prepare": "npm run build",
+    "ci": "npm run lint && npm run build && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ant-ife/ap-mini-ui.git"
+  },
+  "keywords": [
+    "ui-component",
+    "H5"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "*"
+  },
+  "devDependencies": {
+    "@storybook/addon-notes": "3.4.6",
+    "@storybook/vue": "^3.4.2",
+    "autoprefixer": "^8.5.0",
+    "babel-cli": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.16.0",
+    "eslint-config-antife": "1.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-html": "^4.0.1",
+    "fs-extra": "^6.0.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "macaca-coverage": "1",
+    "postcss-loader": "^2.1.5",
+    "prismjs": "^1.14.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.21.0",
+    "stylelint": "^7.13.0",
+    "stylelint-config-antife": "^1.0.0",
+    "svg-sprite-loader": "^3.7.3",
+    "torchjs": "2",
+    "vue-loader": "^15.0.9",
+    "vueify": "^9.4.1",
+    "vue": "^2.5.16"
+  },
+  "engines": {
+    "install-node": "8",
+    "node": "8",
+    "npm": "5"
+  }
+}

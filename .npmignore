@@ -1,0 +1,9 @@
+test
+src
+logs
+coverage
+.storybook
+build
+npm-debug.log*
+*.sw*
+*.un
