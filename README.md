@@ -26,6 +26,8 @@ $ npm i ap-mini-ui --save-dev
 
 ## API Documents
 
+[API Docs](//ant-ife.github.io/ap-mini-ui/)
+
 you can start demo page through the command below:
 
 ```bash
