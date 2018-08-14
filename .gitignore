@@ -2,7 +2,7 @@ node_modules
 logs
 *.log
 *.sw*
-*.un
+*.un~
 npm-debug.log*
 lib
 coverage

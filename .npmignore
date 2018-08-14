@@ -7,4 +7,4 @@ build
 docs/
 npm-debug.log*
 *.sw*
-*.un
+*.un~
