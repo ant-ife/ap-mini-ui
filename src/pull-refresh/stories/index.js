@@ -6,7 +6,7 @@ import usage from '../../stories/usage'
 import example from './example.vue'
 import exampleRaw from '!!raw-loader!./example.vue'
 
-storiesOf('Pull refresh', module)
+storiesOf('Pull Refresh', module)
   .add('Doc', usage(require('./doc.md')))
   .addDecorator(viewport)
   .add('example', source(exampleRaw)(() => example))

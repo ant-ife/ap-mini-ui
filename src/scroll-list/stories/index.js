@@ -12,7 +12,7 @@ import errorRaw from '!!raw-loader!./error.vue'
 import empty from './empty.vue'
 import emptyRaw from '!!raw-loader!./empty.vue'
 
-storiesOf('Scroll list', module)
+storiesOf('Scroll List', module)
   .add('Doc', usage(require('./doc.md')))
   .addDecorator(viewport)
   .add('normal', source(normalRaw)(() => normal))
