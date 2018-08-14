@@ -3,7 +3,6 @@ logs
 *.log
 *.sw*
 *.un
-docs/
 npm-debug.log*
 lib
 coverage

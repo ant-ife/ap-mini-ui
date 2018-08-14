@@ -4,6 +4,7 @@ logs
 coverage
 .storybook
 build
+docs/
 npm-debug.log*
 *.sw*
 *.un
