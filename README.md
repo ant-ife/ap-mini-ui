@@ -10,7 +10,7 @@
 [npm-url]: https://npmjs.org/package/ap-mini-ui
 [travis-image]: https://img.shields.io/travis/ant-ife/ap-mini-ui.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ant-ife/ap-mini-ui
-[vue-image]: https://img.shields.io/badge/Vue-=2-green.svg?style=flat-square
+[vue-image]: https://img.shields.io/badge/Vue-2-green.svg?style=flat-square
 [vue-url]: https://vuejs.org/
 [coveralls-image]: https://img.shields.io/coveralls/ant-ife/ap-mini-ui.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/ant-ife/ap-mini-ui?branch=master
