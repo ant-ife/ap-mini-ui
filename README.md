@@ -21,17 +21,17 @@
 
 > A+ Mini UI Components based on Vue
 
-## Installment
+## Installation
 
 ```bash
-$ npm i ap-mini-ui --save-dev
+$ npm i ap-mini-ui --save
 ```
 
 ## API Documents
 
 [API Docs](//ant-ife.github.io/ap-mini-ui/)
 
-you can start demo page through the command below:
+You can start demo page through the command below:
 
 ```bash
 $ npm run start:storybook
@@ -39,4 +39,4 @@ $ npm run start:storybook
 
 ## License
 
-The MIT License (MIT)
+[MIT](https://opensource.org/licenses/MIT)

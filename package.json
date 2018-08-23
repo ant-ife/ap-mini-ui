@@ -2,6 +2,10 @@
   "name": "ap-mini-ui",
   "version": "1.0.0",
   "description": "A+ Mini UI Components based on Vue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ant-ife/ap-mini-ui.git"
+  },
   "scripts": {
     "start:storybook": "start-storybook -p 9911 -c .storybook",
     "build:storybook": "build-storybook -o ./docs -c .storybook",
@@ -14,49 +18,47 @@
     "prepare": "npm run build",
     "ci": "npm run lint && npm run build && npm run test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ant-ife/ap-mini-ui.git"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
-  "keywords": [
-    "ui-component",
-    "H5"
-  ],
-  "license": "MIT",
   "dependencies": {
     "babel-runtime": "*"
   },
   "devDependencies": {
-    "@storybook/addon-notes": "3.4.6",
-    "@storybook/vue": "^3.4.2",
-    "autoprefixer": "^8.5.0",
+    "@storybook/addon-notes": "^3.4.10",
+    "@storybook/vue": "^3.4.10",
+    "autoprefixer": "^9.1.3",
     "babel-cli": "^6.26.0",
-    "css-loader": "^0.28.11",
-    "eslint": "^4.16.0",
-    "eslint-config-antife": "1.0.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-html": "^4.0.1",
-    "fs-extra": "^6.0.1",
-    "less": "^3.0.4",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-antife": "^1.0.3",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-html": "^4.0.5",
+    "fs-extra": "^7.0.0",
+    "husky": "^1.0.0-rc.13",
+    "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "macaca-coverage": "1",
-    "postcss-loader": "^2.1.5",
-    "prismjs": "^1.14.0",
+    "postcss-loader": "^3.0.0",
+    "prismjs": "^1.15.0",
     "raw-loader": "^0.5.1",
-    "style-loader": "^0.21.0",
-    "stylelint": "^7.13.0",
+    "style-loader": "^0.22.1",
+    "stylelint": "^9.5.0",
     "stylelint-config-antife": "^1.0.0",
-    "svg-sprite-loader": "^3.7.3",
+    "svg-sprite-loader": "^3.9.2",
     "torchjs": "2",
-    "vue-loader": "^15.0.9",
-    "vueify": "^9.4.1",
-    "vue": "^2.5.16"
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.0",
+    "vueify": "^9.4.1"
   },
   "engines": {
     "install-node": "8",
     "node": "8",
     "npm": "5"
-  }
+  },
+  "license": "MIT"
 }
