@@ -149,6 +149,9 @@ export default {
     click () {
       this.$refs.input.focus()
 
+      // 解决点击其他按钮后监听不到 input 事件
+      this.$refs.input.selectionStart = 1
+
       // 解决ios下触发多次focus键盘数字键盘闪动问题
       if (device.iOS) {
         this.$refs.wrap.removeEventListener('click', this.click)
