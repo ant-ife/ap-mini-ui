@@ -37,6 +37,18 @@ You can start demo page through the command below:
 $ npm run start:storybook
 ```
 
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars0.githubusercontent.com/u/2720537?v=4" width="100px;"/><br/><sub><b>tsj1107</b></sub>](https://github.com/tsj1107)<br/>|[<img src="https://avatars1.githubusercontent.com/u/2139038?v=4" width="100px;"/><br/><sub><b>zhangyuheng</b></sub>](https://github.com/zhangyuheng)<br/>|[<img src="https://avatars2.githubusercontent.com/u/197375?v=4" width="100px;"/><br/><sub><b>jsw0528</b></sub>](https://github.com/jsw0528)<br/>
+| :---: | :---: | :---: | :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Wed Aug 29 2018 23:19:23 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)

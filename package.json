@@ -16,7 +16,8 @@
     "test": "torch --compile --renderer --recursive ./test/unit",
     "test:debug": "torch --compile --renderer --recursive ./test/unit --interactive",
     "prepare": "npm run build",
-    "ci": "npm run lint && npm run build && npm run test"
+    "ci": "npm run lint && npm run build && npm run test",
+    "contributor": "git-contributor"
   },
   "husky": {
     "hooks": {
@@ -39,6 +40,7 @@
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-html": "^4.0.5",
     "fs-extra": "^7.0.0",
+    "git-contributor": "^1.0.8",
     "husky": "^1.0.0-rc.13",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
