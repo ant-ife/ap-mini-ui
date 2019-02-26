@@ -58,9 +58,7 @@
     "vueify": "^9.4.1"
   },
   "engines": {
-    "install-node": "8",
-    "node": "8",
-    "npm": "5"
+    "node": ">=8.0.0"
   },
   "license": "MIT"
 }
