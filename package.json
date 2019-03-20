@@ -24,9 +24,6 @@
       "pre-commit": "npm run lint"
     }
   },
-  "dependencies": {
-    "babel-runtime": "*"
-  },
   "devDependencies": {
     "@storybook/addon-notes": "3.4.6",
     "@storybook/vue": "^3.4.10",
